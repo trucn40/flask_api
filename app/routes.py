@@ -1,6 +1,8 @@
 from flask import Blueprint, jsonify, request
+import os
 
 # Path to your user data file
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Base directory of the project
 USER_DATA_FILE = os.path.join(BASE_DIR, 'data', 'users.txt')
 
 # Utility function to read users from the file
